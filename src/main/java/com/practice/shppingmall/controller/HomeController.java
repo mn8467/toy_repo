@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @Slf4j
 public class HomeController {
+    
 
     @RequestMapping(value = "/")
     public String home() {
