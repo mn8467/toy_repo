@@ -13,4 +13,7 @@ spring:
           preferred_uuid_jdbc_type: CHAR
         use_sql_comments: true
         dialect: org.hibernate.dialect.MySQLDialect
-
+  thymeleaf:
+    cache: true
+    enabled: true
+    prefix: classpath:/templates/
