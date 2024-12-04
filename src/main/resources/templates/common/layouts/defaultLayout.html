@@ -5,11 +5,11 @@
     <head th:replace="~{common/fragments/config :: ConfigFragment}">
         <title>Title</title>
     </head>
-    <body>
-        <header th:replace="~{common/fragments/header :: HeaderFragment}"></header>
+    <body class="ecommerce">
+        <div th:replace="~{common/fragments/header :: HeaderFragment}"></div>
 
         <th:block layout:fragment="Content"></th:block>
 
-        <footer th:replace="~{common/fragments/footer :: FooterFragment}"></footer>
+        <div th:replace="~{common/fragments/footer :: FooterFragment}"></div>
     </body>
 </html>
