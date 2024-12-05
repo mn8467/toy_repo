@@ -1,0 +1,3 @@
+ALTER TABLE `shoppingMall`.`arrivals`
+ADD COLUMN `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP AFTER `sale_yn`,
+ADD COLUMN `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP AFTER `created_at`;
