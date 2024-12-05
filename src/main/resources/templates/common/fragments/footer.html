@@ -3,7 +3,7 @@
       xmlns:th="http://www.thymeleaf.org"
       th:fragment="FooterFragment">
     <!-- BEGIN BRANDS -->
-    <div class="brands" th:unless="${closeBrand}">
+    <div class="brands" th:unless="${closeBrand}"> <!-- 보이려면 true 값 전달 -->
         <div class="container">
             <div class="owl-carousel owl-carousel6-brands">
                 <a href="shop-product-list.html"><img th:src="@{/pages/img/brands/canon.jpg}" alt="canon" title="canon"></a>
