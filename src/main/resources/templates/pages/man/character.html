@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{common/layouts/defaultLayout}"
+      layout:fragment="Content">
+<head>
+</head>
+<body>
+<div class="main">
+    <div class="row margin-bottom-40" style="padding: 40px">
+<div th:each="product : ${products}">
+    <div>
+        <div class="pi-img-wrapper">
+            <img th:src="@{}" class="img-responsive" alt=${products.title}>
+            <div>
+                <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
+            </div>
+        </div>
+        <h3><a th:href="@{'/shop-item/' + ${product.id}}" th:text="${product.title}"></a></h3>
+        <div class="pi-price" th:text="${product.price}"></div>
+        <a href="javascript:;" class="btn btn-default add2cart" th:onclick="'addToCart(' + ${product.id} + ')'">Add to cart</a>
+    </div>
+</div>
+    </div>
+</div>
+</body>
+</html>

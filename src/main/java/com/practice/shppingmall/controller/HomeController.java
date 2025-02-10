@@ -1,6 +1,7 @@
 package com.practice.shppingmall.controller;
 
 import com.practice.shppingmall.service.HomeService;
+import com.practice.shppingmall.service.ProductService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,11 +15,14 @@ public class HomeController {
     @Autowired
     private HomeService homeService;
 
+    @Autowired
+    private ProductService productService;
+
     @RequestMapping(value = "/")
     public String home(Model model) {
 
 //        model.addAttribute("title", "Controller Title");
-
+        productService.abcd();
         return "pages/home";
     }
 }
